@@ -12,6 +12,8 @@ body {
 
 .content {
   padding: 30px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 h2 {
@@ -20,6 +22,7 @@ h2 {
 
 p {
   font-weight: bold;
+  margin-bottom: 20px;
 }
 
 /* 👇👇👇  ADD YOUR FORM STYLES BENEATH  👇👇👇*/
@@ -82,4 +85,69 @@ input[type="submit"]:hover {
 
 .form select {
   height: 30px;
+}
+
+#sign-in-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#login-field {
+  margin-bottom: 2cap;
+}
+
+#password-field {
+  margin-bottom: 20px;
+}
+
+#stay-signed-in {
+  margin-bottom: 20px;
+}
+
+.form-submit-control {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+#name-field {
+  margin-bottom: 15px;
+}
+
+#email {
+  margin-bottom: 15px;
+}
+
+#password {
+  margin-bottom: 15px;
+}
+
+#confirm-passwword {
+  margin-bottom: 15px;
+}
+
+#phone {
+  margin-bottom: 15px;
+}
+
+#avatar {
+  margin-bottom: 15px;
+}
+
+.form-group-horizontal-control {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15px;
+  gap: 30px;
+}
+
+#gender {
+  margin-bottom: 0;
+}
+
+.other {
+  margin-bottom: 15px;
 }
