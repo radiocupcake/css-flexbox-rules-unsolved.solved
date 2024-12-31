@@ -17,44 +17,106 @@ header {
   padding: 20px 30px;
 }
 
-.content-wrapper {
-  max-width: 964px;
-  margin: 0 auto;
-}
-
 .logo-search {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 20px;
+  flex: 1; /* Allow the logo-search section to take space between logo and options */
 }
 
 .logo {
-  font-size: 28px;
-  font-weight: bold;
-  font-family: "Caveat", sans-serif;
+  flex-shrink: 0; /* Prevent the logo from shrinking */
 }
 
 .search-bar {
-  position: relative;
-  width: 400px;
-  background-color: #1f1f27;
-  padding: 10px 20px;
-  border-radius: 20px;
+  flex: 0 1 300px; /* Set a maximum width for the search bar */
   display: flex;
   align-items: center;
+  background-color: #2b2d36;
+  border-radius: 8px;
+  padding: 5px 10px;
 }
 
 .search-bar input {
   flex: 1;
   border: none;
+  background: none;
+  color: white;
   outline: none;
-  background-color: transparent;
-  color: #8d8ba5;
-  font-size: 16px;
 }
 
 .search-icon {
+  margin-left: 5px;
   color: #8d8ba5;
+}
+
+.search-icon i:hover {
+  color: white;
+}
+
+.options {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  align-items: center;
+  flex-shrink: 0; /* Ensure the options section doesn’t shrink */
+}
+
+.header-content {
+  display: flex; /* Ensure all items are in a single row */
+  align-items: center;
+  justify-content: space-between;
+}
+
+.categories {
+  display: flex;
+  justify-content: center; /* Center the categories horizontally */
+  align-items: center; /* Align categories vertically */
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.section-control {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out elements to opposite ends */
+  align-items: center; /* Vertically align elements */
+  margin-bottom: 20px;
+  padding-bottom: 10px; /* Add padding to separate the content from the line */
+  border-bottom: 1px solid #8d8ba5; /* Add the dividing line */
+}
+
+.section-control h2 {
+  margin: 0; /* Remove extra margin from the heading */
+}
+
+.view-options {
+  display: flex;
+  gap: 10px; /* Add spacing between the layout icons */
+}
+
+.view-option {
+  cursor: pointer; /* Show pointer cursor for interactive icons */
+  color: #8d8ba5;
+  transition: color 0.3s;
+}
+
+.view-option:hover {
+  color: white; /* Change color on hover for a better user experience */
+}
+
+.view-option.active {
+  color: #d5ef9a; /* Highlight active layout option */
+}
+
+.content-wrapper {
+  max-width: 964px;
+  margin: 0 auto;
+}
+
+.options {
+  display: flex; 
+  align-items: center; 
+  gap: 20px; 
 }
 
 .categories {
@@ -78,9 +140,9 @@ header {
 
 .products {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Allow wrapping of items */
   gap: 20px;
-  justify-content: space-between;
+  justify-content: flex-start; /* Align items to the left */
 }
 
 .product {
@@ -88,14 +150,11 @@ header {
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.3s;
-  flex: 1 1 calc(33.333% - 20px);
+  flex: 1 1 calc(33.333% - 20px); /* Default size for most tiles */
   max-width: calc(33.333% - 20px);
   display: flex;
   flex-direction: column;
-}
 
-.product:hover {
-  transform: scale(1.05);
 }
 
 .product-image-wrapper img {
@@ -144,4 +203,3 @@ header {
 .buy-btn:hover {
   background-color: #e74c3c;
 }
-</style>
