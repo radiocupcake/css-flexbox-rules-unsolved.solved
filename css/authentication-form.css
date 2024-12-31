@@ -98,15 +98,15 @@ input[type="submit"]:hover {
 }
 
 #password-field {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 #stay-signed-in {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .form-submit-control {
-  margin: 20px;
+  margin: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -114,33 +114,33 @@ input[type="submit"]:hover {
 }
 
 #name-field {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 #email {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 #password {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
-#confirm-passwword {
-  margin-bottom: 15px;
+#confirm-password {
+  margin-bottom: 30px;
 }
 
 #phone {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 #avatar {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 .form-group-horizontal-control {
   display: flex;
   flex-direction: row;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   gap: 30px;
 }
 
@@ -149,5 +149,9 @@ input[type="submit"]:hover {
 }
 
 .other {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
+}
+
+.form-radio-control label {
+  font-weight: normal;
 }
