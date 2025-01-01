@@ -1,3 +1,4 @@
+/* General Reset */
 * {
   padding: 0;
   margin: 0;
@@ -12,24 +13,27 @@ body {
   color: white;
 }
 
+/* Header */
 header {
   background-color: #121216;
   padding: 20px 30px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo-search {
   display: flex;
   align-items: center;
   gap: 20px;
-  flex: 1; /* Allow the logo-search section to take space between logo and options */
-}
-
-.logo {
-  flex-shrink: 0; /* Prevent the logo from shrinking */
+  flex: 1;
 }
 
 .search-bar {
-  flex: 0 1 300px; /* Set a maximum width for the search bar */
+  flex: 0 1 300px;
   display: flex;
   align-items: center;
   background-color: #2b2d36;
@@ -56,71 +60,15 @@ header {
 
 .options {
   display: flex;
+  align-items: center;
   gap: 20px;
-  justify-content: flex-end;
-  align-items: center;
-  flex-shrink: 0; /* Ensure the options section doesn’t shrink */
 }
 
-.header-content {
-  display: flex; /* Ensure all items are in a single row */
-  align-items: center;
-  justify-content: space-between;
-}
-
+/* Categories */
 .categories {
   display: flex;
-  justify-content: center; /* Center the categories horizontally */
-  align-items: center; /* Align categories vertically */
-  gap: 10px;
-  margin: 20px 0;
-}
-
-.section-control {
-  display: flex; /* Use flexbox for layout */
-  justify-content: space-between; /* Space out elements to opposite ends */
-  align-items: center; /* Vertically align elements */
-  margin-bottom: 20px;
-  padding-bottom: 10px; /* Add padding to separate the content from the line */
-  border-bottom: 1px solid #8d8ba5; /* Add the dividing line */
-}
-
-.section-control h2 {
-  margin: 0; /* Remove extra margin from the heading */
-}
-
-.view-options {
-  display: flex;
-  gap: 10px; /* Add spacing between the layout icons */
-}
-
-.view-option {
-  cursor: pointer; /* Show pointer cursor for interactive icons */
-  color: #8d8ba5;
-  transition: color 0.3s;
-}
-
-.view-option:hover {
-  color: white; /* Change color on hover for a better user experience */
-}
-
-.view-option.active {
-  color: #d5ef9a; /* Highlight active layout option */
-}
-
-.content-wrapper {
-  max-width: 964px;
-  margin: 0 auto;
-}
-
-.options {
-  display: flex; 
-  align-items: center; 
-  gap: 20px; 
-}
-
-.categories {
-  display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
   margin: 20px 0;
 }
@@ -138,36 +86,85 @@ header {
   color: #1f1f27;
 }
 
+/* Section Control */
+.section-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #8d8ba5;
+}
+
+.view-options {
+  display: flex;
+  gap: 10px;
+}
+
+.view-option {
+  cursor: pointer;
+  color: #8d8ba5;
+  transition: color 0.3s;
+}
+
+.view-option:hover {
+  color: white;
+}
+
+.view-option.active {
+  color: #d5ef9a;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+  max-width: 964px;
+  margin: 0 auto;
+}
+
+/* Products */
 .products {
   display: flex;
-  flex-wrap: wrap; /* Allow wrapping of items */
-  gap: 20px;
-  justify-content: flex-start; /* Align items to the left */
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-start;
 }
 
-.product {
+.products.grid .product {
+  flex: 1 1 calc(33.33% - 1rem);
+  max-width: calc(33.33% - 1rem);
   background-color: #2b2d36;
   border-radius: 8px;
-  overflow: hidden;
   transition: transform 0.3s;
-  flex: 1 1 calc(33.333% - 20px); /* Default size for most tiles */
-  max-width: calc(33.333% - 20px);
-  display: flex;
-  flex-direction: column;
-
 }
 
-.product-image-wrapper img {
-  width: 100%;
-  height: auto;
+.products.lines .product,
+.products.lines-action .product {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #333;
+  width: 100%
+}
+
+
+.product-image-wrapper {
+  flex: 0 0 auto;
+}
+
+.products.lines .product-image-wrapper {
+  flex: 0 0 150px;
+}
+
+.products.lines-action .product-image-wrapper {
+  flex: 0 0 100px;
 }
 
 .product-data {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex-grow: 1;
+  flex: 1;
 }
 
 .product-name {
@@ -203,3 +200,10 @@ header {
 .buy-btn:hover {
   background-color: #e74c3c;
 }
+
+/* Image Styling */
+.product-image-wrapper img {
+  width: 100%;
+  height: auto;
+}
+
